@@ -1,0 +1,70 @@
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logine</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/CSS/bootstrap.css">
+    <script type="text/javascript" src="/static/JS/jquery-3.js"></script>
+
+
+</head>
+
+	<style>
+        *{
+            box-sizing: border-box;
+        }
+		body {
+  			background: #364e68; color: #2c3e50;
+  			font: 500 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  			margin: 0; padding: 0;
+  			box-sizing: border-box;
+			}
+
+      .regmargin{
+        margin :100px 0 25px;
+      }
+	</style>
+
+<body>
+
+    <script type="text/javascript" src="{% static 'JS/jquery_publick.js' %}"></script>
+    <script type="text/javascript" src="{% static 'JS/bootstrap.js' %}"></script>
+
+    {% include 'basic/black_navbar.html' %}
+
+	<div class='container'>
+
+
+        <div class="jumbotron regmargin">
+            <div class="text-center">
+                <button class="btn btn-lg btn-info col-md-5" data-toggle="collapse" data-target="#register">
+                    Registration Page
+                </button>
+                    <h3 class="bg-warning text-white col-md-11 m-5">{{ regerror }}</h3>
+                    <h3 class="bg-success text-white col-md-11 m-5">{{ regsubmit }} </h3>
+                <br>
+                
+            </div>
+        <br>
+        <br>
+            <form method="POST" class="collapse" id="register">{% csrf_token %}
+                {{ regst_form }}
+                <br>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-lg btn-primary col-md-5" id="logsubmit">Submit</button>
+                </div>
+            <br>
+                
+            </form>
+        </div>
+
+        <a href="/" class="col-md-12 btn btn-lg btn-warning" roll="button" aria-pressed="true">
+            <b>Main Page</b></a>
+
+
+    </div>
+</body>
+</html>

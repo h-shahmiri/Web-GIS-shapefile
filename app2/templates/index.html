@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.2/mapbox-gl.js'></script>
+  <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
+  <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js'></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.js'></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.0/mapbox-gl-language.js'></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js'></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.min.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.2/mapbox-gl.css' rel='stylesheet'/>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.css' type='text/css'/>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.css' type='text/css' />
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.css' type='text/css'/>
+  <link rel="stylesheet" type="text/css" href="../static/CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../static/CSS/Maps.css">
+
+  <script type="text/javascript" src="../static/JS/jquery3_Liberry.js"></script>
+  <title>WebGis</title>
+</head>
+<body>
+
+  <script type="text/javascript" src="../static/JS/map.js"></script>
+  <script type="text/javascript" src="../static/JS/jquery_code.js"></script>
+
+
+  <div id='menu' class='rightbar'>
+  	<div id='Golocat' class='button'> Location</div>
+  	<div id='area1' class='butt'> Locate 1</div>
+    <div id='area2' class='butt'> Locate 2</div>
+    <div id='area3' class='butt'> Locate 3</div>
+
+    <div id='Gocity' class='button'> Cities</div>
+    <div id='tehMap' class='butt'> Tehran</div>
+    <div id='mashMap' class='butt'> Mashhad</div>
+    <div id='esfMap' class='butt'> Esfahan</div>
+
+    <div id='navi' class='button'> Routing</div>
+    <div id='Goonmark' class='button'> Go on mark</div>
+  </div>
+
+  <div id='map' class='maps'></div>
+  <div id='distance' class='distanc'></div>
+  <pre id='coordinat' class='coordinat'></pre>
+
+  <div class='calculation-box' id='calculated-area'></div>
+</div>
+
+
+
+
+
+</body>
+
+
+</html>

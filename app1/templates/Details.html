@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {% load static %}
+    <head>
+        <meta charset="utf-8" />
+        <title>The HTML5</title>
+        <meta name="description" content="The HTML5" />
+        
+        <link rel="stylesheet" type="text/css" href="/static/CSS/bootstrap.css">
+        <script type="text/javascript" src="/static/JS/jquery-3.js"></script>
+    </head>
+
+<style type="text/css">
+    * {
+        margin: 0; padding: 0; border: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: #839192;
+    }
+    .styletext1{
+        background: #5da2d5;
+        padding: 1.2em ;
+    }.styletext2{
+        background: #ececec;
+        border: 0px; margin: 0px;
+        text-align: justify;
+        padding: 15px;
+    }.styletext3{
+        background: #90ccf4;
+        padding: 0.6em ;
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+    }
+</style>
+
+<body>
+    <script type="text/javascript" src="{% static 'JS/jquery_code.js' %}"></script>
+    <script type="text/javascript" src="{% static 'JS/bootstrap.js' %}"></script>
+    
+    {% include 'basic/black_navbar.html' %}
+    
+    <div class="container">
+        <section id="sec1">
+            <div class="panel-group" id="panelg">
+                <div id="intro" class="panel panel-default  collapse show">
+                    <div class="panel-heading styletext1">
+                        <h3>
+                        <a  data-toggle="collapse" href="#hello1" data-parent="#panelg" class="text-center">
+                            Json Movies</a>
+                        <a  data-toggle="collapse" href="#hello2" data-parent="#panelg" class="text-center">
+                            &nbsp&nbsp;Mines Report</a>
+                        <a  data-toggle="collapse" href="#hello3" data-parent="#panelg" class="text-center">
+                            &nbsp&nbsp MinesLeayer</a>
+                        </h3>
+                    </div>
+
+                    <div id="hello1" class="panel-collapse collapse">
+                        <div class="panel-body styletext2"><h2><b>Json: </b></h2>
+                            <mark> {{ movie_data }} </mark>
+                        </div></div>
+        
+                    <div id="hello2" class="panel-collapse collapse">
+                        <div class="panel-body styletext2"><h2><b>Report: </b></h2>
+                            {% if request.user.is_authenticated %} <!-- if moviesreport != null  -->
+                                {{ cation }}
+                                <mark> {{ mines_data }} </mark>
+
+                            {% else %}
+                                <div class="text-center"><h2>
+                                    <p class="badge badge-pill badge-warning">Report Is Not Avaibale<br><br>Please Login</p><h2>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div id="hello3" class="panel-collapse collapse">
+                        <div class="panel-body styletext2"><h2><b>Mines </b></h2>
+
+                            <div id="table" class="table-responsive">
+                                <table class="table table-hover table-bordered table-striped">
+                                <thead>
+                                    <tr class="table-primary text-center">
+                                    <th>Geom</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    {% for y in geom_list %}
+                                        <td>{{y}}</td>
+                                    {% endfor %}
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+
+                <div class="panel-footer styletext3">
+                    <h3 class="text-center">Tank You For Attention</h3></div>
+                </div>
+        
+            </div>
+        </section>
+
+        <div class="col-sm-12 col-md-12 d-inline-block m-5">
+            <ul class="pagination pagination-lg  justify-content-center">
+                <li class="page-item"><a class="page-link" href="/">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="/">1</a></li>
+                <li class="page-item"><a class="page-link" href="/movies">2</a></li>
+                <li class="page-item active"><a class="page-link" href='/details'>3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="details">Next</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+
+  {% load leaflet_tags %}
+  {% load static %}
+  <head>
+    <title>Django web apps</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    {% leaflet_js %}
+    {% leaflet_css %}
+
+    <link rel="stylesheet" type="text/css" href="/static/CSS/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/Style.css">
+    <link rel="stylesheet" type="text/css" href="/static/leaflet-glc/leaflet.groupedlayercontrol.css">
+    <link rel="stylesheet" type="text/css" href="/static/leaflet-routing-machine-3.2/leaflet-routing-machine.css">
+
+    <script type="text/javascript" src="/static/JS/jquery-3.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.js"></script>
+    <script type="text/javascript" src="/static/leaflet-glc/leaflet.groupedlayercontrol.js"></script>
+    <script type="text/javascript" src="/static/leaflet-routing-machine-3.2/leaflet-routing-machine.js"></script>
+
+  </head>
+  <style>
+
+      *{
+        box-sizing: border-box
+      }
+      body {
+          background: #364e68; color: #f8f8f8;
+          font: 500 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+          margin: 0; padding: 0;
+          box-sizing: border-box;
+          box-sizing: border-box
+        }
+
+    </style>
+
+  <body>
+
+  
+    <script type="text/javascript" src="{% static 'JS/jquery_code.js' %}"></script>
+    <script type="text/javascript" src="{% static 'JS/bootstrap.js' %}"></script>
+
+
+  <!-- ============================================= Black Navbar ===================== -->
+    {% include 'basic/black_navbar.html' %}
+  <!-- ============================================= Rightbar ===================== -->
+  <div>
+
+    {% if request.user.is_authenticated %}
+
+      <div id='menu' class='col-sm-12 col-md-3 rightbar'>
+        <div id='locat'    class='row'>Locations</div>
+          <div id='tehran'   class='butt'> Tehran</div>
+          <div id='mashhad'  class='butt'> Mashad</div>
+          <div id='sanandaj' class='butt'> Sanandaj</div>
+
+        <div id='layer'       class='row'> Layers</div>
+          <div id='gotehran'  class='butt'> Tehran</div>
+          <div id='hostlayer' class='butt'> Hostpital Layer</div>
+          <div id='creatpoint'class='butt'> Add Fence</div>
+          <div id='fence'     class='butt'> Fence</div>
+
+          <div id='gomine'    class='butt'> Mines</div>
+          <div id='minelayer' class='butt'> Mine Layer</div>
+          <div id='minefence' class='butt'> Mine Fence</div>
+
+          <div id='hydro'     class='butt'> Hydrometry</div>
+
+
+        <div id='tools'   class='row'> Tools</div>
+          <div id='admin' class='butt'> Admin</div>
+          <div id='coord' class='butt'> Coordinate</div>
+          <div id='route' class='butt'> Routing</div>
+
+          <br>
+          <div class="text"> Latitude &nbsp&nbsp
+            <input type="text" name="lang" id="lan"   class="textbox col-md-8" value=""></div>
+          <div class="text"> Longitude
+            <input type="text" name="lang" id="long"  class="textbox col-md-8" value=""></div>
+          <div class="text"> Range &nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="text" name="lang" id="range" class="textbox col-md-8" value=""></div>
+          <div class="text"> Warning &nbsp
+            <input type="text" name="lang" id="warn"  class="warbox col-md-8" value=""></div>
+          <br>
+          <div id='createfence' class='fencebut'> Create Fence</div>
+
+        {% else %}
+          <div id='menu' class='col-sm-12 col-md-3 rightbar'><br>
+            <p class="badge badge-pill badge-info">
+              Tools Menu Is Not Avaibale<br>Please Login</p><br>
+          </div>
+
+        {% endif %}
+      </div>
+
+      <div id='map' class="col-sm-12 col-md-9  maps">
+        {% leaflet_map "gis" callback="window.out_layer" %}
+      </div>
+    </div>
+
+  <!-- ============================================= PageCounter ===================== -->
+    <div class="col-sm-12 col-md-3 float-left">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item actives"><a class="page-link" href="/">1</a></li>
+            <li class="page-item"><a class="page-link" href="/movies">2</a></li>
+            <li class="page-item"><a class="page-link" href='/details'>3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="/movies">Next</a></li>
+        </ul>
+      </div>
+
+
+<!-- ============================================= SCRIPT ===================== -->
+<!-- ============================================= Script ===================== -->
+<!-- ============================================= script ===================== -->
+
+
+<script type="text/javascript">
+
+  {% include 'basic/mainpage.js' %}
+  
+
+</script>
+
+</body>
+</html>

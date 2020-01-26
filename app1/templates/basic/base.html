@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  {% load static %}
+  <head>
+    <title>Django web apps</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <link rel="stylesheet" type="text/css" href="/static/CSS/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/Style.css">
+    <link rel="stylesheet" type="text/css" href="/static/leaflet-glc/leaflet.groupedlayercontrol.css">
+    <link rel="stylesheet" type="text/css" href="/static/leaflet-routing-machine-3.2/leaflet-routing-machine.css">
+
+  </head>
+  <style>
+
+      *{
+        box-sizing: border-box
+      }
+      body {
+          background: #364e68; color: #f8f8f8;
+          font: 500 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+          margin: 0; padding: 0;
+          box-sizing: border-box;
+          box-sizing: border-box
+        }
+
+    </style>
+
+  <body>
+
+    <script type="text/javascript" src="{% static 'JS/jquery_code.js' %}"></script>
+    <script type="text/javascript" src="{% static 'JS/bootstrap.js' %}"></script>
+
+    {% include 'basic/black_navbar.html' %}
+
+<script type="text/javascript">
+
+  {% include 'basic/mainpage.js' %}
+
+</script>
+
+</body>
+</html>

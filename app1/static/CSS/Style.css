@@ -1,0 +1,108 @@
+*{
+	border: 0;margin: 0;padding: 0;
+	box-sizing: border-box;
+}
+#gis{
+	height: 100%; width: 100%;
+}
+
+.maps {
+	border: 0;margin: 0;padding: 0;
+	height: 620px ;
+	font-size: 22px;
+	position: relative;
+	float: right;
+	display: inline;
+	border-radius: 0.5em;
+}
+
+.rightbar {
+  	height: 100%;
+  	background: #EBF0F6;
+  	font-size: 26px;
+  	color: rgb(34,51,59);
+  	text-align: center;
+  	margin: 0px 0px 10px 0px;
+	float:left;
+	border-radius: 0.3em;
+  	display: inline; position: relative;
+	box-sizing: border-box;
+}
+
+.row {
+	color: #fff;
+	font-size: 18px; text-align: center;
+	background-color: #189AB4;
+	padding: 1em; margin: 2px;
+	position: relative;
+	border-radius: 0.5em;
+	border-bottom: 0.3px #05445E solid;
+	cursor: pointer;
+}.row:hover {
+  	background-color: #095977
+}
+
+.butt {
+	color: #fff;
+	font-size: 18px; text-align: center;
+	background-color: #3685B5;
+	padding: 1em; margin: 2px;
+	border-radius: 0.5em;
+	border-bottom: 0.3px #05445E solid;
+	cursor: pointer;
+  	position: relative; display:none;
+}.butt:hover {
+	background-color: #2f3f73;
+	right: -10px;
+}
+
+.text {
+	font-size: 17px;
+	text-align: center;
+	position: relative;
+}
+
+.textbox {
+	font-size: 17px;
+	text-align: center;
+	background-color: rgb(213, 219, 219);
+	position: relative; display: inline;
+	width: 80%; height: 25px;
+	border-radius: 0.5em;
+	border-bottom: 0.3px #05445E solid;
+	margin: 3px;
+}
+.textarea{
+	font-size: 17px; 
+	background-color: #c2cad0;
+	height: 100px; margin: 3px; width: 700px;
+	border-radius: 0.5em;
+	border-bottom: 0.3px #05445E solid;
+}
+
+.fencebut {
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	background-color: #9fedd7;
+	padding: 1em; margin: 2px;
+	border-radius: 0.5em;
+	border-bottom: 0.3px #05445E solid;
+	cursor: pointer;
+  	position: relative;
+}.fencebut:hover {
+  background-color: #026670
+}
+
+.warbox {
+	font-size: 14px;
+	text-align: center;
+	background-color: rgb(213, 219, 219);
+	position: relative; display: inline;
+	width: 80%; height: 50px;
+	border-radius: 0.5em;
+	border-bottom: 0.3px #05445E solid;
+	margin: 3px;
+}
+input[type=text] {
+}

@@ -1,0 +1,43 @@
+
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container">
+          <div class="navbar-heading">
+            <h1><a href="/admin" class="navbar-brand" title="DataBase">Django</a><h1>
+          </div>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Links</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="/">MainPage</a>
+                  <a class="dropdown-item" href="/osm">OSM</a>
+                  <a class="dropdown-item" href="/register">Register</a>
+                  <a class="dropdown-item" href="/moviesdetails">Details</a>
+                  <a class="dropdown-item" href="/movies">Movies</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Second Link</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#sec1">Section 1</a>
+                  <a class="dropdown-item" href="#sec2">Section 2</a>
+                  <a class="dropdown-item" href="#sec3">Section 3</a>
+                </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="#">Three Line</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Four Button</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+
+              {% if request.user.is_authenticated %} <!-- if moviesreport != null  -->
+                <li class="nav-item"><a class="nav-link" href="/admin/logout">Logout</a></li>
+              {% else %}
+                <a class="nav-link" href="/login" data-toggle="popover" title="Site introduction">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="/register">Registeration</a></li>
+              {% endif %}
+          </ul>
+        </div>
+      </nav>

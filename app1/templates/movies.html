@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="utf-8" />
+    <title>The HTML5</title>
+    <meta name="description" content="The HTML5" />
+
+    <link rel="stylesheet" type="text/css" href="/static/CSS/bootstrap.css">
+    <script type="text/javascript" src="/static/JS/jquery-3.js"></script>
+
+</head>
+
+<style type="text/css">
+  * {
+        margin: 0;padding: 0;border: 0;
+        box-sizing: border-box;
+  }
+    body {
+        background-color: #839192;
+  }
+    .yelwnav{
+	    font-size: 26px;
+    }
+    .tiser{
+        box-shadow: 0px 0px 10px black;
+        padding: 15px;
+    }.tiserwtc{
+        box-shadow: 0px 0px 10px black;
+        padding: 15px; background: #5d6d7e ;
+    }
+    .imgslide{
+        height:400px;
+    }
+</style>
+
+<body>
+    <script type="text/javascript" src="{% static 'JS/jquery_publick.js' %}"></script>
+    <script type="text/javascript" src="{% static 'JS/bootstrap.js' %}"></script>
+
+<!-- ==================================   Black Navbar ================================ -->
+    {% include 'basic/black_navbar.html' %}
+<!-- ================================== Yellow Navbar ================================ -->
+
+    <nav class="navbar navbar-expand-md bg-warning navbar-light yelwnav" id="yellnav">
+        <a class="navbar-brand" href="#">Movies</a>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Gerner</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Horror</a>
+                <a class="dropdown-item" href="#">History</a>
+                <a class="dropdown-item" href="#">Romance</a>
+                <a class="dropdown-item" href="#">Drama</a>
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Adventure</a>
+              </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Produce</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">2016</a>
+                <a class="dropdown-item" href="#">2017</a>
+                <a class="dropdown-item" href="#">2018</a>
+                <a class="dropdown-item" href="#">2019</a>
+                <a class="dropdown-item disabled" href="#">2020</a>
+              </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Age</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">-12</a>
+                <a class="dropdown-item" href="#">12-15</a>
+                <a class="dropdown-item" href="#">15-18</a>
+                <a class="dropdown-item" href="#">+18</a>
+              </div>
+          </li>
+
+          <li class="nav-item dropdown disabled">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Base</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- ==================================   Stat Page ================================ -->
+
+    <!-- ================================== Image Silde ================================ -->
+    
+    <div class="container">
+
+        <div id="myCarousel" class="carousel slide bg-inverse w-50 ml-auto mr-auto" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="5"></li>
+                <li data-target="#myCarousel" data-slide-to="6"></li>
+            </ol>
+  
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img class="d-block w-100 imgslide" src="../static/img/1.jpg" alt="First slide">
+                    <div class="carousel-caption">
+                        <h3>John Wick</h3>
+                        <p>first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 imgslide" src="../static/img/2.jpg" alt="Second slide">
+                    <div class="carousel-caption">
+                        <h3>Second slide</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 imgslide" src="../static/img/3.jpg" alt="Third slide">
+                    <div class="carousel-caption">
+                        <h3>Third slide</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 imgslide" src="../static/img/4.jpg" alt="Third slide">
+                    <div class="carousel-caption">
+                        <h3>Fourth slide</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 imgslide" src="../static/img/5.jpg" alt="Third slide">
+                    <div class="carousel-caption">
+                        <h3>Fifth slide</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 imgslide" src="../static/img/6.jpg" alt="Third slide">
+                    <div class="carousel-caption">
+                        <h3>Star</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 imgslide" src="../static/img/7.jpg" alt="Third slide">
+                    <div class="carousel-caption">
+                        <h3 class="text-dark">Basic Instinct</h3>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- ==================================   Add Movie Menu ================================ -->
+
+
+        <div class="jumbotron">
+            <form class="form-inline" method="POST">{% csrf_token %}
+                <label for="query">Name:</label>
+                <input type="text"     class="col-md-3 form-control m-2" id="query" name="name">
+                <label for="query">Gener:</label>
+                <input type="text"     class="col-md-3 form-control m-2" id="query" name="gener">
+                <label for="query">Watch:</label>
+                <input type="checkbox" class="col-md-1 form-control m-2" id="query" name="watch">
+                
+                <label for="job">Age</label>
+            	<select id="job" class="col-md-2 form-control m-2" name="age_status">
+                    <option value="child">Child</option>
+                    <option value="adolescent">Adolescent</option>
+                    <option value="young man">Young man</option>
+                    <option value="adult">Adult</option>
+            	</select>
+            <br>
+                <button type="submit" class="col-md-12 btn btn-lg btn-primary m-auto">Add Movie</button>
+            <br>
+                {% if messages %}
+                    {% for msg in messages %}
+                        <div class="alert alert-info alert-dismissible  col-md-12 m-auto text-center" role="alert">
+                            {{ msg }}
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </form>
+
+        </div>
+        <!-- ==================================  Movie Tables ================================ -->
+
+        <div class="jumbotron">
+            <div id="table" class="table-responsive">
+            <table class="table table-hover table-bordered table-striped">
+                <thead>
+                    <tr class="table-primary text-center">
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Gener</th>
+                        <th>Age</th>
+                        <th>Watched</th>
+                        <th>Edit</th>
+                        <th>Del</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                    {% if all_movies %} <!-- baraie jologir as alart dar hebgam khali bodan-->
+                        {% for x in all_movies %}
+                            {% if x.watch %}
+                                <tr class="table-primary">
+                                    <td>{{ x.id }}</td>
+                                    <td>{{ x.name }}</td>
+                                    <td>{{ x.gener }}</td>
+                                    <td>{{ x.age_status }}</td>
+                                    <td><a href="{% url 'watch'         x.id %}">True</a></td>
+                                    <td><a href="{% url 'edit_movies'   x.id %}">edit</a></td>
+                                    <td><a href="{% url 'delete_movies' x.id %}">del</a></td>
+                                </tr>
+                            {% else %}
+                                <tr class="table-info">
+                                    <td>{{ x.id }}</td>
+                                    <td>{{ x.name }}</td>
+                                    <td>{{ x.gener }}</td>
+                                    <td>{{ x.age_status }}</td>
+                                    <td><a href="{% url 'watched'       x.id %}">False</a></td>
+                                    <td><a href="{% url 'edit_movies'   x.id %}">edit</a></td>
+                                    <td><a href="{% url 'delete_movies' x.id %}">del</a></td>
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}            
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-sm-12 col-md-12 d-inline-block m-3">
+                <ul class="pagination  justify-content-center">
+                    <li class="page-item"><a class="page-link" href="?pg=1"><<</a></li>
+                    {% if all_movies.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?pg={{ all_movies.previous_page_number }}">
+                                {{all_movies.previous_page_number}}
+                            </a></li>
+                    {% endif %}
+                    <li class="page-item">
+                        <a class="page-link" href="?pg={{ all_movies.number }}">
+                            {{all_movies.number}}
+                        </a></li>
+
+                    {% if all_movies.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?pg={{ all_movies.next_page_number }}">
+                                {{all_movies.next_page_number}}
+                            </a></li>
+                    {% endif %}
+
+                    <li class="page-item">
+                        <a class="page-link" href="?pg={{ all_movies.paginator.num_pages }}">>></a></li>
+                </ul>
+            </div>
+            
+            <a href="details" class="col-md-12 btn btn-lg btn-warning" roll="button">Json Movies</a>
+        </div>
+
+    <!-- ==================================  Movie Tiser Tables ================================ -->
+
+    <div class="jumbotron">
+        <div class="row">
+            {% if all_movies %} <!-- baraie jologir as alart dar hebgam khali bodan-->
+                {% for x in all_movies %}
+                    {% if x.watch %}
+                        <div class="col-md-4 tiserwtc">
+                            <img src='{{ x.movieimg }}' class='img-fluid'><br>
+                            <div><h4><b>Name :  {{ x.name }}</b></h4></div>
+                            <div><h4><b>Gener : {{ x.gener }}</b></h4></div>
+                            <a href="{% url 'details' %}" class="btn btn-primary">Details<a>
+                        </div> 
+                    {% else %}
+                        <div class="col-md-4 tiser">
+                            <img src='{{ x.movieimg }}' class='img-fluid'><br>
+                            <div><h4><b>Name :  {{ x.name }}</b></h4></div>
+                            <div><h4><b>Gener : {{ x.gener }}</b></h4></div>
+                            <a href="{% url 'details' %}" class="btn btn-primary">Details<a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+
+        <div class="col-sm-12 col-md-12 d-inline-block m-5">
+            <ul class="pagination pagination-lg  justify-content-center">
+                <li class="page-item"><a class="page-link" href="/">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="/">1</a></li>
+                <li class="page-item active"><a class="page-link" href="/movies">2</a></li>
+                <li class="page-item"><a class="page-link" href='/details'>3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="details">Next</a></li>
+            </ul>
+        </div>
+
+</div>
+
+
+</body>
